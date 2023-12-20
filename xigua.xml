@@ -14,6 +14,6 @@
 
   <project name="LineageOS/android_hardware_oplus" path="hardware/oplus" revision="lineage-20" />
 
-   <project name="android_vendor_oneplus_xigua" path="vendor/oneplus/salami" remote="William_sado" revision="master" />
+   <project name="android_vendor_oneplus_xigua" path="vendor/oneplus/xigua" remote="William_sado" revision="master" />
    <project name="android_vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="William_sado" revision="lineage-20" />
 </manifest>
