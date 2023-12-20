@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <!-- <remote name="TheMuppets" -->
-      <!-- fetch="https://gitlab.com/the-muppets/" -->
-      <!-- sync-c="true" -->
-      <!-- sync-tags="false" /> -->
+   <remote name="William_sado"
+       fetch="https://gitlab.com/William_sado/"
+       sync-c="true"
+       sync-tags="false" />
   
-  <project name="Crispsu/android_device_oneplus_xigua" path="device/oneplus/xigua" revision="lineage-20" />
-  <project name="LineageOS/android_device_oneplus_sm8550-common" path="device/oneplus/sm8550-common" revision="lineage-20" />
+  <project name="sadoyui/android_device_oneplus_xigua" path="device/oneplus/xigua" revision="lineage-20" />
+  <project name="sadoyui/android_device_oneplus_sm8550-common" path="device/oneplus/sm8550-common" revision="lineage-20" />
 
-  <project name="LineageOS/android_kernel_oneplus_sm8550" path="kernel/oneplus/sm8550" revision="lineage-20" />
-  <project name="LineageOS/android_kernel_oneplus_sm8550-devicetrees" path="kernel/oneplus/sm8550-devicetrees" revision="lineage-20" />
+  <project name="sadoyui/android_kernel_oneplus_sm8550" path="kernel/oneplus/sm8550" revision="lineage-20" />
+  <project name="sadoyui/android_kernel_oneplus_sm8550-devicetrees" path="kernel/oneplus/sm8550-devicetrees" revision="lineage-20" />
   <project name="LineageOS/android_kernel_oneplus_sm8550-modules" path="kernel/oneplus/sm8550-modules" revision="lineage-20" />
 
   <project name="LineageOS/android_hardware_oplus" path="hardware/oplus" revision="lineage-20" />
 
-  <!-- <project name="proprietary_vendor_oneplus_salami" path="vendor/oneplus/salami" remote="TheMuppets" revision="lineage-20" /> -->
-  <!-- <project name="proprietary_vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="TheMuppets" revision="lineage-20" /> -->
+   <project name="android_vendor_oneplus_xigua" path="vendor/oneplus/salami" remote="William_sado" revision="master" />
+   <project name="android_vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="William_sado" revision="lineage-20" />
 </manifest>
