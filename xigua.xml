@@ -5,14 +5,14 @@
       <!-- sync-c="true" -->
       <!-- sync-tags="false" /> -->
   
-  <project name="Crispsu/android_device_oneplus_xigua" path="device/oneplus/xigua" revision="lineage-21" />
-  <project name="LineageOS/android_device_oneplus_sm8550-common" path="device/oneplus/sm8550-common" revision="lineage-21" />
+  <project name="Crispsu/android_device_oneplus_xigua" path="device/oneplus/xigua" revision="lineage-20" />
+  <project name="LineageOS/android_device_oneplus_sm8550-common" path="device/oneplus/sm8550-common" revision="lineage-20" />
 
-  <project name="LineageOS/android_kernel_oneplus_sm8550" path="kernel/oneplus/sm8550" revision="lineage-21" />
-  <project name="LineageOS/android_kernel_oneplus_sm8550-devicetrees" path="kernel/oneplus/sm8550-devicetrees" revision="lineage-21" />
-  <project name="LineageOS/android_kernel_oneplus_sm8550-modules" path="kernel/oneplus/sm8550-modules" revision="lineage-21" />
+  <project name="LineageOS/android_kernel_oneplus_sm8550" path="kernel/oneplus/sm8550" revision="lineage-20" />
+  <project name="LineageOS/android_kernel_oneplus_sm8550-devicetrees" path="kernel/oneplus/sm8550-devicetrees" revision="lineage-20" />
+  <project name="LineageOS/android_kernel_oneplus_sm8550-modules" path="kernel/oneplus/sm8550-modules" revision="lineage-20" />
 
-  <project name="LineageOS/android_hardware_oplus" path="hardware/oplus" revision="lineage-21" />
+  <project name="LineageOS/android_hardware_oplus" path="hardware/oplus" revision="lineage-20" />
 
   <!-- <project name="proprietary_vendor_oneplus_salami" path="vendor/oneplus/salami" remote="TheMuppets" revision="lineage-20" /> -->
   <!-- <project name="proprietary_vendor_oneplus_sm8550-common" path="vendor/oneplus/sm8550-common" remote="TheMuppets" revision="lineage-20" /> -->
