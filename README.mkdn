@@ -12,7 +12,7 @@ repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
 ```
 To build for the `Oneplus ACE 2 Pro`, you will need specific repositories. Use these commands to sync them :
 ```
-mkdir .repo/local_manifests && wget https://raw.githubusercontent.com/jiongjiongJOJO/lineageos_android_xigua/master/xigua.xml -O .repo/local_manifests/xigua.xml
+mkdir .repo/local_manifests && wget https://raw.githubusercontent.com/jiongjiongJOJO/lineageos_android_xigua/lineage-21/xigua.xml -O .repo/local_manifests/xigua.xml
 ```
 Then to sync up:
 ```
