@@ -1,0 +1,102 @@
+LineageOS
+===========
+
+Getting started
+---------------
+
+To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+
+Initialize your local repository as you usually do for LineageOS :
+```
+repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs
+```
+To build for the `Oneplus ACE 2 Pro`, you will need specific repositories. Use these commands to sync them :
+```
+mkdir .repo/local_manifests && wget https://raw.githubusercontent.com/jiongjiongJOJO/lineageos_android_xigua/master/xigua.xml -O .repo/local_manifests/xigua.xml
+```
+Then to sync up:
+```
+repo sync
+```
+Do not forget to `git lfs pull`, just in case:
+```
+repo forall -c 'git lfs pull'
+```
+
+
+Building for the Oneplus ACE 2 Pro
+------------------
+To build LineageOS for the Oneplus ACE 2 Pro, you will need to use a few commands.
+
+Load your build environnement using this command:
+```
+. build/envsetup.sh
+```
+Use the `repopick` command to cherry-pick `kalama` specific fixes:
+```
+repopick -t 13-taro-kalama
+```
+You're now ready to start the build:
+```
+lunch lineage_salami-userdebug
+m
+```
+
+
+Flashing the images
+------------------
+Our work is currently based on the CPH2449_A25 firmware. If you're not running A25, flash it and boot it at least once before flashing your build. ([CPH2449_A25 Full OTA](https://gauss-componentotacostmanual-eu.allawnofs.com/remove-28f8287dcc47dbfd64d1cfb31f877f75/component-ota/23/08/28/9d93d654eec1429684aec3692137c786.zip))
+
+Unlock your bootloader if you haven't done it before
+```
+fastboot flashing unlock
+```
+Put your phone in bootloader mode :
+```
+fastboot -w
+fastboot reboot fastboot
+```
+Once your device is in bootloader mode, cd the `cd` command to navigate to your build out folder, most likely `out/target/product/salami` and run:
+```
+# Replace with your path
+export ANDROID_PRODUCT_OUT=~/android/LineageOS/out/target/product/salami
+fastboot flashall
+```
+If you cannot flash your device using your build machine (for example if you're using a remote server to build LineageOS) copy all files in `out/target/product/salami` to a local machine (no need to copy the folders), and use all these commands to flash the images:
+```
+# Replace with your path
+export ANDROID_PRODUCT_OUT=/Users/dekefake/Downloads/LineageOS_images
+fastboot flashall
+```
+If you want to flash Magisk right after flashing LineageOS, rather use `fastboot flashall --skip-reboot` and then flash Magisk using `adb sideload` in LineageOS recovery.
+
+
+Updating firmware
+---------------
+To update your device, download a full OTA package and extract the firmware images using [payload-dumper-go](https://github.com/ssut/payload-dumper-go). Then, boot your device into FastbootD mode, and flash these images :
+```
+fastboot flash --slot=all abl abl.img
+fastboot flash --slot=all aop_config aop_config.img
+fastboot flash --slot=all aop aop.img
+fastboot flash --slot=all bluetooth bluetooth.img
+fastboot flash --slot=all cpucp cpucp.img
+fastboot flash --slot=all devcfg devcfg.img
+fastboot flash --slot=all dsp dsp.img
+fastboot flash --slot=all engineering_cdt engineering_cdt.img
+fastboot flash --slot=all featenabler featenabler.img
+fastboot flash --slot=all hyp hyp.img
+fastboot flash --slot=all imagefv imagefv.img
+fastboot flash --slot=all keymaster keymaster.img
+fastboot flash --slot=all modem modem.img
+fastboot flash --slot=all oplus_sec oplus_sec.img
+fastboot flash --slot=all oplusstanvbk oplusstanvbk.img
+fastboot flash --slot=all qupfw qupfw.img
+fastboot flash --slot=all shrm shrm.img
+fastboot flash --slot=all splash splash.img
+fastboot flash --slot=all tz tz.img
+fastboot flash --slot=all uefi uefi.img
+fastboot flash --slot=all uefisecapp uefisecapp.img
+fastboot flash --slot=all xbl_config xbl_config.img
+fastboot flash --slot=all xbl_ramdump xbl_ramdump.img
+fastboot flash --slot=all xbl xbl.img
+```
