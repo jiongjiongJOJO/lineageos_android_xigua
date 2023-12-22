@@ -189,3 +189,18 @@ fastboot flash --slot=all xbl_config xbl_config.img
 fastboot flash --slot=all xbl_ramdump xbl_ramdump.img
 fastboot flash --slot=all xbl xbl.img
 ```
+
+# Q&A
+
+Q:
+```
+Output:
+ccache: error: Failed to create directory /home/jojo/.ccache/tmp: Read-only file system
+\nWrite to a read-only file system detected. Possible fixes include
+1. Generate file directly to out/ which is ReadWrite, #recommend solution
+2. BUILD_BROKEN_SRC_DIR_RW_ALLOWLIST := <my/path/1> <my/path/2> #discouraged, subset of source tree will be RW
+3. BUILD_BROKEN_SRC_DIR_IS_WRITABLE := true #highly discouraged, entire source tree will be RW
+```
+
+A:
+取消缓存加速，因为上面是通过export设置的，所以直接关闭终端，重新进入目录，再次重新编译即可（注意之前设置的export参数都将失效，例如`source build/envsetup.sh`等，都需要重新设置）
