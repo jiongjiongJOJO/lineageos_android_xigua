@@ -41,7 +41,7 @@ mkdir -p ~/android/lineage
 
 从 Google 下载[platform tools](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)，并解压它们(指令自动完成)：
 ```
-wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip -o ~/platform-tools-latest-linux.zip
+wget https://dl.google.com/android/repository/platform-tools-latest-linux.zip -O ~/platform-tools-latest-linux.zip
 unzip platform-tools-latest-linux.zip -d ~
 rm ~/platform-tools-latest-linux.zip
 ```
