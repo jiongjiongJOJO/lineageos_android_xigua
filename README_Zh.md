@@ -116,7 +116,7 @@ repo forall -c 'git lfs pull'
 
 使用以下命令加载构建环境：
 ```
-build/envsetup.sh
+source build/envsetup.sh
 ```
 
 [//]: # (Use the `repopick` command to cherry-pick `kalama` specific fixes:)
