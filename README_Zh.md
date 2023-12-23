@@ -94,7 +94,7 @@ ccache -M 50G
 像通常对LineageOS所做的那样初始化本地存储库：
 ```
 cd ~/android/lineage
-repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs --depth=1
+repo init -u https://github.com/LineageOS/android.git -b lineage-20-test --git-lfs --depth=1
 ```
 要为`Oneplus ACE 2 Pro`构建，您需要特定的存储库。使用以下命令同步它们：
 ```
