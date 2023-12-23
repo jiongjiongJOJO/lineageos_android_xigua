@@ -98,7 +98,7 @@ repo init -u https://github.com/LineageOS/android.git -b lineage-20-test --git-l
 ```
 要为`Oneplus ACE 2 Pro`构建，您需要特定的存储库。使用以下命令同步它们：
 ```
-mkdir .repo/local_manifests && wget https://raw.githubusercontent.com/jiongjiongJOJO/lineageos_android_xigua/lineage-20/xigua.xml -O .repo/local_manifests/xigua.xml
+mkdir .repo/local_manifests && wget https://raw.githubusercontent.com/jiongjiongJOJO/lineageos_android_xigua/lineage-20-test/xigua.xml -O .repo/local_manifests/xigua.xml
 ```
 然后进行同步：
 ```
