@@ -84,7 +84,6 @@ git lfs install
 
 打开缓存以加快构建速度
 ```
-mkdir -p /usr/bin/ccache
 export USE_CCACHE=1
 export CCACHE_EXEC=/usr/bin/ccache
 ccache -M 50G
