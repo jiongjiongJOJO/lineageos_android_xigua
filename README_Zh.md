@@ -11,7 +11,7 @@ LineageOS
 
 在国内环境不太容易下载完整的数据，建议全程挂科学上网下载。
 ```
-export IP=10.10.108.225
+export IP=127.0.0.1
 export PORT=7890
 export http_proxy=http://${IP}:${PORT}
 export https_proxy=http://${IP}:${PORT}
@@ -84,6 +84,7 @@ git lfs install
 
 打开缓存以加快构建速度
 ```
+mkdir -p /usr/bin/ccache
 export USE_CCACHE=1
 export CCACHE_EXEC=/usr/bin/ccache
 ccache -M 50G
