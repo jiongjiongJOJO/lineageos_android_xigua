@@ -11,7 +11,7 @@ LineageOS
 
 在国内环境不太容易下载完整的数据，建议全程挂科学上网下载。
 ```
-export IP=10.10.108.225
+export IP=127.0.0.1
 export PORT=7890
 export http_proxy=http://${IP}:${PORT}
 export https_proxy=http://${IP}:${PORT}
@@ -87,6 +87,7 @@ git lfs install
 export USE_CCACHE=1
 export CCACHE_EXEC=/usr/bin/ccache
 ccache -M 50G
+ccache -o compression=true
 ```
 
 ## 初始化代码
@@ -94,11 +95,11 @@ ccache -M 50G
 像通常对LineageOS所做的那样初始化本地存储库：
 ```
 cd ~/android/lineage
-repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs --depth=1
+repo init -u https://github.com/LineageOS/android.git -b lineage-20.0 --git-lfs
 ```
 要为`Oneplus ACE 2 Pro`构建，您需要特定的存储库。使用以下命令同步它们：
 ```
-mkdir .repo/local_manifests && wget https://raw.githubusercontent.com/jiongjiongJOJO/lineageos_android_xigua/lineage-20/xigua.xml -O .repo/local_manifests/xigua.xml
+mkdir .repo/local_manifests && wget https://raw.githubusercontent.com/jiongjiongJOJO/lineageos_android_xigua/lineage-20-test/xigua.xml -O .repo/local_manifests/xigua.xml
 ```
 然后进行同步：
 ```
